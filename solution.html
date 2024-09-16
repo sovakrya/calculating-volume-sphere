@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
 
+    </head>
+
+    <body>
+        <div class="main-box">
+            <span>input radius value and get the volume fo a sphere</span>
+
+            <label for="radius">Radius</label>
+
+            <input id="radius"/>
+
+            <label for="volume">Volume</label>
+
+            <input id="volume" type="text" />
+
+            <button id="btn" onclick="calculatingVolumeSphere">Calculate</button>
+        </div>
+    </body>
+
+
+</html>
+
+<script>
+
+    let radius = document.getElementById("radius").value
+
+    // V = ⁴/₃πr³.
+
+    function calculatingVolumeSphere(){
+        const volume = 4/3 * 3.14 * (Number(radius) ** 3)
+        
+        document.getElementById("volume").innerText = String(volume)
+    }
+</script>
+
+<style>
+    .main-box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    input {
+        width: 150px;
+        height: 30px;
+    }
+
+    button {
+        height: 20px;
+        width: 150px;
+    }
+</style>
