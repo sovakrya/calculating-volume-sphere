@@ -18,24 +18,27 @@
 
             <button id="btn" onclick="calculatingVolumeSphere">Calculate</button>
         </div>
+
+
+        <script>
+            // V = ⁴/₃πr³.
+        
+            const inputRadius = document.getElementById("radius")
+            const inputVolume = document.getElementById("volume")
+        
+            function calculatingVolumeSphere(){
+                const radius = inputRadius.value
+                const volume = 4/3 * Math.PI * (Number(radius) ** 3)
+                
+                inputVolume.value = String(volume)
+            }
+        </script>
     </body>
 
 
 </html>
 
-<script>
-    // V = ⁴/₃πr³.
 
-    const inputRadius = document.getElementById("radius")
-    const inputVolume = document.getElementById("volume")
-
-    function calculatingVolumeSphere(){
-        const radius = inputRadius.value
-        const volume = 4/3 * 3.14 * (Number(radius) ** 3)
-        
-        inputVolume.value = String(volume)
-    }
-</script>
 
 <style>
     .main-box {
